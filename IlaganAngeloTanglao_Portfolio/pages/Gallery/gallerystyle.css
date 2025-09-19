@@ -1,0 +1,286 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #161f32;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main{
+    flex: 1;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+.navbar{
+    width:100%;
+    height:80px;
+    position:fixed;
+    background-color: #111111;
+    display:flex;
+    justify-content: space-between;
+}
+.navleftcontainer{
+    display:grid;
+    width: fit-content;
+    align-items: center;
+    margin-left: 50px;
+}
+.navleftcontainer a{
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 699;
+    padding:10px 30px;
+    border-radius: 6px;
+}
+.navleftcontainer img{
+    width:14px;
+}
+.navleftcontainer a:hover{
+    background-color: #292929;
+}
+.navrightcontainer{
+    display:grid;
+    width:fit-content;
+    background-color: red;
+}
+
+/* MAIN CONTENT STARTS HERE */
+.gallery{
+    justify-self: center;
+    width:1000px;
+    max-width: 90vw;
+    height:fit-content;
+    background-color: #111111;
+    margin-top:30px;
+    margin-bottom: 100px;
+    display:flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+.gallerycontainer{
+    width: 90%;
+    height: fit-content;
+    margin:40px 10px 40px 10px;
+}
+.gallerycontainer h1{
+    color:white;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+.album{
+    width:100%;
+    height:300px;
+    display: flex;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
+    margin: 30px 0px 50px 0px;
+    gap:2.4%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    anchor-name: --carousel;
+    scroll-snap-type: x mandatory;
+}
+h2{
+    margin:40px 0px -10px 0px;
+    color:#f2f2f2;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -0.1px;
+}
+.albumcard{
+    scroll-snap-align: start;
+    flex:0 0 48.8%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    border:#161f32 2px solid;
+    border-radius: 6px;
+}
+.album::-webkit-scrollbar{
+    display:none;
+}
+.album::scroll-button(left), .album::scroll-button(right){
+    content:'←';
+    font-size:100px;
+    color: white;
+    font-size: 30px !important;
+    height:40px;
+    width:40px;
+    font-size:30px;
+    background-color:transparent;
+    border: none;
+    cursor:pointer;
+    position: fixed;
+    position-anchor: --carousel;
+    position-area: center left;
+    background-color:#444444;
+    border-radius: 50%;
+    translate: 50%;
+}
+.album::scroll-button(left):disabled, .websiteoverviewboxmidcontent::scroll-button(right):disabled{
+    opacity:0.5;
+}
+.album::scroll-button(right){
+    content:'→';
+    position-area: right center;
+    translate: -50%;
+}
+.albumcard img{
+    object-fit: cover;
+    width:100%;
+    height: 100%;
+}
+.albumcard p{
+    text-align: center;
+    margin-top: 120px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+.album3{
+    width:100%;
+    height:300px;
+    display: flex;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
+    margin: 30px 0px 50px 0px;
+    gap:2.4%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    anchor-name: --carousel2;
+    scroll-snap-type: x mandatory;
+}
+.album3::-webkit-scrollbar{
+    display:none;
+}
+.album3::scroll-button(left), .album3::scroll-button(right){
+    content:'←';
+    font-size:100px;
+    color: white;
+    font-size: 30px !important;
+    height:40px;
+    width:40px;
+    font-size:30px;
+    background-color:transparent;
+    border: none;
+    cursor:pointer;
+    position: fixed;
+    position-anchor: --carousel2;
+    position-area: center left;
+    background-color:#444444;
+    border-radius: 50%;
+    translate: 50%;
+}
+.album3::scroll-button(left):disabled, .websiteoverviewboxmidcontent::scroll-button(right):disabled{
+    opacity:0.5;
+}
+.album3::scroll-button(right){
+    content:'→';
+    position-area: right center;
+    translate: -50%;
+}
+
+/* FOOTER STARTS HERE */
+.footernav{
+    width:100%;
+    height:65px;
+    display:flex;
+    background-color: #292929;
+    align-items:center;
+    justify-content:center;
+    gap: 0px;
+    border-top:solid 2px #333333;
+}
+.footernav button{
+    all: unset;
+    padding: 5px 15px;
+    border-radius:6px;
+}
+.footernav button:hover{
+    background-color:#444444;
+}
+.footernav a{
+    text-decoration: none;
+    color:white;
+    font-family: sans-serif;
+    font-size:13px;
+    font-weight: 700;
+    padding: 2px 15px;
+    letter-spacing: 1.5px;
+}
+/* FOOTER BOX starts here */
+.footerbox{
+    width: 100%;
+    height:400px;
+    display:flex;
+    flex-direction:column;
+    background-color:#111111;
+    align-items: center;
+}
+.socials{
+    display:flex;
+    margin-top:20px;
+    gap:15px;
+}
+.socials img{
+    width: 20px;
+    background-color:#282828;
+    border-radius:10px;
+    padding:10px
+}
+.brand{
+    margin-top: 0px;
+}
+.brand img{
+    width: 100px;
+    filter:invert(100%);
+    filter: brightness(40%);
+}
+.brand img:hover{
+    filter:none;
+}
+.quote p{
+    color:#777777;
+    text-align: center;
+    margin-top: -70px;
+}
+#bigquote{
+    font-size: 50px;
+    margin-top:-10px;    
+}
+#suntzu{
+    margin-top:10px;
+}
+
+@media(max-width:500px){
+    .footernav{
+        flex-direction: column;
+        gap: 10px;
+        height: 100px;
+    }
+}
+@media(max-width:425px){
+    .navleftcontainer{
+        margin-left: 10px;
+    }
+    .albumcard{
+        flex: 0 0 110%;
+    }
+}
