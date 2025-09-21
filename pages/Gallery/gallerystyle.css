@@ -21,6 +21,7 @@ main{
     background-color: #111111;
     display:flex;
     justify-content: space-between;
+    z-index: 100;
 }
 .navleftcontainer{
     display:grid;
@@ -283,4 +284,5 @@ h2{
     .albumcard{
         flex: 0 0 110%;
     }
+
 }
